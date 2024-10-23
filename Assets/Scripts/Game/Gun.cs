@@ -194,17 +194,34 @@ public class Gun : MonoBehaviour
          * Task #1A: Implement the gun functionality
          * Useful functions and variables:
          *  - Spawn a bullet at given position: SpawnBullet(position, rotation)
-         *  - Create rotation from Euler angles: Quaternion.Euler(rotX, rotY, rotZ)
+         *  - Create rotation from Euler angles: Quaternion.Euler(rotX, rotY, rotZ) 
          *  - Director of the bullets (the gun) : director.position, director.rotation
          *  - Mode of the weapon, spread bullets if true : shotgun
          *  - Number / spread of shotgun bullets : shotgunBullets, shotgunSpread
          * Implement both single shot and shotgun (swap by pressing <SPACE> by default)
          */
         
-        SpawnBullet(
-            new Vector3{ x = 0.0f, y = 0.0f, z = 0.0f }, 
-            Quaternion.Euler(0.0f, 0.0f, 0.0f)
-        );
+        if(shotgun)
+        {
+            float spreadDifference = shotgunSpread / shotgunBullets;
+            
+            for (var i = 0; i < shotgunBullets; i++)
+            {
+                // Spawns each bullet with different angle -> half spread turn left + bullet times angle for each bullet
+                SpawnBullet(
+                    new Vector3{ x = director.position.x, y = director.position.y, z = 0.0f }, 
+                    Quaternion.Euler(director.eulerAngles.x, director.eulerAngles.y, director.eulerAngles.z - shotgunSpread / 2 + i * spreadDifference) 
+                );
+            }
+        }
+        else
+        {
+            SpawnBullet(
+                new Vector3{ x = director.position.x, y = director.position.y, z = 0.0f }, 
+                Quaternion.Euler(director.eulerAngles.x, director.eulerAngles.y, director.eulerAngles.z)
+            );
+        }
+        
     }
 
     /// <summary>
@@ -262,3 +279,4 @@ public class Gun : MonoBehaviour
         shotgunBullets = Math.Max(shotgunBullets + magnitude, 1);
     }
 }
+

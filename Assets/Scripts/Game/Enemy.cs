@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -74,6 +76,20 @@ public class Enemy : MonoBehaviour
          *    Use mRigidBody.MovePosition to move the enemy
          * Implement a simple AI, which will head towards the closest player and follow them.
          */
+
+        var nearestPlayer = GameManager.Instance.NearestPlayer(transform.position);
+        
+        if(nearestPlayer == null)
+        {
+            throw new Exception("No player exists");
+        }
+
+        var distanceX = nearestPlayer.transform.position.x - transform.position.x;
+        var distanceY = nearestPlayer.transform.position.y - transform.position.y;
+
+        Vector3 moveTo = new Vector3(transform.position.x + distanceX * 0.01f, transform.position.y + distanceY * 0.01f, transform.position.z);
+        mRigidBody.MovePosition(moveTo);
+
     }
 
     /// <summary>
@@ -113,3 +129,4 @@ public class Enemy : MonoBehaviour
         };
     }
 }
+
