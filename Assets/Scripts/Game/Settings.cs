@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using Unity.Entities;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
@@ -115,13 +116,31 @@ public class Settings : MonoBehaviour
      *  - Events from the Player Input Manager: Joined Event and Left Event
      *  - Registering a new player: AddPlayer(gameObject)
      *  - Removing a registered player: RemovePlayer(gameObject)
+     * 
      * Add the Player Input Manager to the Settings object, handle the new player registration,
      *   and enable joining of second player using the alternative input scheme.
+     * 
      * Hint: You could use the "Invoke Unity Events" notification behavior and
      *   create two functions here "OnPlayerJoined" and "OnPlayerLeft", which
      *   can call through to the AddPlayer and RemovePlayer respectively.
      *   Do not forget to set the Joining Behavior and the Player Prefab!
      */
+
+    ///<summary>
+    ///sdcsd
+    /// </summary>
+    public void OnPlayerJoined(PlayerInput playerInput)
+    {
+        AddPlayer(playerInput.gameObject);
+    }
+    
+    ///<summary>
+    ///sdcsd
+    /// </summary>
+    public void OnPlayerLeft(PlayerInput playerInput)
+    {
+        RemovePlayer(playerInput.gameObject);
+    }
     
     /// <summary>
     /// Called when the script instance is first loaded.
