@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <DualShockGamepad>/buttonSouth
+  m_ControlPath: <Gamepad>/buttonSouth
 --- !u!114 &58431840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &255148522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementRange: 50
   m_DynamicOriginRange: 100
-  m_ControlPath: <DualShockGamepad>/leftStick
+  m_ControlPath: <Gamepad>/leftStick
   m_Behaviour: 0
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
@@ -752,11 +752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionId
@@ -807,6 +807,10 @@ PrefabInstance:
       value: 81e03d89-c41d-4715-b3b4-f6a98e4cb6ae
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionId
+      value: cbc09757-38c6-4eb9-81de-e8859f437edb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionName
       value: PlayerMap/Look[/Mouse/position]
       objectReference: {fileID: 0}
@@ -852,7 +856,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_ActionEvents.Array.data[11].m_ActionName
-      value: PlayerMap/ShowVPad[/Keyboard/v]
+      value: PlayerMap/ToggleVPadUI[/Keyboard/v]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionName
+      value: UI/Stick
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
@@ -888,7 +896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880325, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1097,6 +1105,10 @@ PrefabInstance:
     - target: {fileID: 1204133201242880330, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204133201242880330, guid: 44209977f93d7854bac517dff34087fc, type: 3}
+      propertyPath: invincible
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1204133201242880331, guid: 44209977f93d7854bac517dff34087fc, type: 3}
       propertyPath: m_Enabled
@@ -1322,7 +1334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <DualShockGamepad>/buttonWest
+  m_ControlPath: <Gamepad>/buttonWest
 --- !u!114 &757833452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,7 +1425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementRange: 50
   m_DynamicOriginRange: 100
-  m_ControlPath: <DualShockGamepad>/rightStick
+  m_ControlPath: <Gamepad>/rightStick
   m_Behaviour: 0
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
@@ -2705,7 +2717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <DualShockGamepad>/buttonEast
+  m_ControlPath: <Gamepad>/buttonEast
 --- !u!114 &1921442521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2984,7 +2996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <DualShockGamepad>/buttonNorth
+  m_ControlPath: <Gamepad>/buttonNorth
 --- !u!114 &2125404502
 MonoBehaviour:
   m_ObjectHideFlags: 0

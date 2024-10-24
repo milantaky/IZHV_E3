@@ -18,7 +18,7 @@
                     "name": "Fire",
                     "type": "Button",
                     "id": "6e1be1ee-ff9a-4194-811b-43e1c0048b9f",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -45,7 +45,7 @@
                     "name": "ToggleDevUI",
                     "type": "Button",
                     "id": "c191a22d-c268-45a0-a41b-9a9667c46201",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -72,7 +72,7 @@
                     "name": "ToggleShotgun",
                     "type": "Button",
                     "id": "c02e0070-ebf0-44d5-a4e2-180f51847f65",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -90,7 +90,7 @@
                     "name": "ToggleVPadUI",
                     "type": "Button",
                     "id": "81e03d89-c41d-4715-b3b4-f6a98e4cb6ae",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -110,11 +110,44 @@
                 },
                 {
                     "name": "",
+                    "id": "0f6af941-5a01-462e-a089-21ecbc02d91c",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";GP",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9e398846-71c4-4317-82b9-20d39697bbb6",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "M&K1",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aaaf75b2-fe57-45f3-b15b-b9880b3bfe61",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";GP",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2147a7a2-a53d-46c5-8e1a-3ae8d266fc9b",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";GP",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -173,6 +206,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a1a9859d-4e9f-427c-a4ff-f87dee4df314",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";GP;M&K1",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "One Modifier",
@@ -308,6 +352,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e6939855-3e44-438a-b6ff-adf4a15a0816",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";GP",
+                    "action": "ToggleShotgun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a1b8ccfd-10b6-474f-b9c1-a739e095feee",
                     "path": "<Keyboard>/c",
                     "interactions": "",
@@ -347,10 +402,19 @@
                     "name": "Click",
                     "type": "Button",
                     "id": "17b0948b-88ef-47c1-948e-655107ed963c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Stick",
+                    "type": "Value",
+                    "id": "cbc09757-38c6-4eb9-81de-e8859f437edb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -367,12 +431,34 @@
                 },
                 {
                     "name": "",
+                    "id": "db6a6364-5365-4b60-9e7a-ef269a8bfd57",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";GP",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "710ac835-89dc-4c7c-9f69-bf3a8aa3ea5c",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "M&K1",
                     "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "070fbeeb-df35-4869-8a53-d2d19a3d71c5",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";GP",
+                    "action": "Stick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -391,6 +477,17 @@
                 },
                 {
                     "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "GP",
+            "bindingGroup": "GP",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }
